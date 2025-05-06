@@ -1,0 +1,31 @@
+<div class="dashboard">
+    <header>
+      <h1>Welcome to Your Dashboard</h1>
+      <button (click)="logout()">Logout</button>
+    </header>
+  
+    <section class="widgets">
+      <div class="card">
+        <h3>Profile</h3>
+        <p>View and update your user info.</p>
+      </div>
+      <div class="card">
+        <h3>Stats</h3>
+        <p>Check usage and performance.</p>
+      </div>
+      <div class="card">
+        <h3>Settings</h3>
+        <p>Manage your preferences.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div *ngIf="user">
+        <p>Welcome, {{ user.username }}!</p>
+        <p>Email: {{ user.email }}</p>
+      </div>
+      
+    </div>
+    
+  </div>
+  
